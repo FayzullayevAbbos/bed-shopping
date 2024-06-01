@@ -1,0 +1,218 @@
+.contact-container{
+    margin-top: 100px;
+}
+.contact-container .container{
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    overflow: hidden;
+    align-content:center;
+    margin: 0 auto;
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.form-items{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 2rem;
+}
+.form-items .form-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.form-input,.form-textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background: #e2e2e2;
+    resize: none;
+    outline: none;
+}
+.sub-btns{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.sub-btns .sub-btn{
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background: #f42c37;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.sub-btns .sub-btn:hover{
+    background: #000;
+}
+
+.iframe-container{
+    width: 45%;
+}
+.iframe-container iframe{
+    height: 550px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+.contact-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+.contact-card{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.contact-card .contact-icon{
+    font-size: 3rem;
+    color: #f42c37;
+}
+.contact-card:nth-child(2) .contact-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-card .contact-text{
+    font-size: 20px;
+    color: #555;
+}
+@media screen and  (max-width:1200px) {
+    .contact-container{
+        margin-top: 50px;
+    }
+    .contact-container .container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .contact-form{
+        /* flex-direction: column; */
+        gap: 2rem;
+        padding: 20px;
+    }
+    .form-items{
+        width: 45%;
+    }
+    .form-items .form-title{
+        font-size: 2rem;
+    }
+    .form-input,.form-textarea{
+        padding: 15px;
+    }
+    .iframe-container{
+        width: 50%;
+    }
+    .iframe-container iframe{
+        height: 400px;
+    }    
+}
+@media screen and  (max-width:1000px) {
+    .contact-form{
+        /* flex-direction: column; */
+    }
+    .form-items{
+        width: 100%;
+    }
+    .form-items .form-title{
+        font-size: 1.5rem;
+    }
+    .sub-btns .sub-btn{
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    .iframe-container{
+        width: 100%;
+    }
+    .iframe-container iframe{
+        height: 350px;
+    }
+    .contact-cards{
+        gap: 2rem;
+    }
+    .contact-card{
+        gap: 1rem;
+    }
+    .contact-card .contact-icon{
+        font-size: 2rem;
+    }
+    .contact-card:nth-child(2) .contact-texts{
+        gap: 5px;
+    }
+    .contact-card .contact-text{
+        font-size: 15px;
+    }
+}
+@media screen and  (max-width:800px) {
+    .contact-container{
+        margin-top: 40px;
+    }
+    .contact-container .container{
+        gap: 2rem;
+    }
+    .contact-form{
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .form-items .form-title{
+        font-size: 1.2rem;
+    }
+    .sub-btns .sub-btn{
+        width: 100%;
+        padding: 15px 0;
+        font-size: 0.7rem;
+    }
+    .iframe-container iframe{
+        height: 300px;
+    }
+    .contact-card .contact-icon{
+        font-size: 1.5rem;
+    }
+    .contact-card:nth-child(2) .contact-texts{
+        gap: 3px;
+    }
+    .contact-card .contact-text{
+        font-size: 12px;
+    }
+}
+@media screen and  (max-width:700px) {
+
+}
+@media screen and  (max-width:500px) {
+    .contact-cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and  (max-width:400px) {
+    .contact-card .contact-icon{
+        font-size: 1.2rem;
+    }
+    .contact-card .contact-text{
+        font-size: 10px;
+    }
+    .iframe-container iframe{
+        height: 250px;
+    }
+}
+@media screen and  (max-width:320px) {
+    .contact-container{
+        margin-top: 10px;
+    }
+    .contact-card .contact-text{
+        font-size: 8px;
+    }
+}

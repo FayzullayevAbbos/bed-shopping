@@ -1,0 +1,392 @@
+.selected-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.selected-cards {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+hr{
+  width: 100%;
+  border: 1px solid #888;
+}
+.descr-review{
+  display: flex;
+  width: 50%;
+}
+.descr-review .span-item{
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+.descr-review .span-item.active{
+  color: #f42c37;
+}
+.descr-review .span-item::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f42c37;
+  transition: 0.3s;
+}
+.descr-review .span-item.active::after{
+  width: 100%;
+}
+.description-card{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 100px;
+}
+.descr-title{
+  font-size: 30px;
+}
+.descr-text-title{
+  font-size: 28px;
+  font-weight: bold;
+}
+.product-descr{
+  font-size: 18px;
+  color: #888;
+  text-align: justify;
+  line-height: 1.5;
+}
+.review-card{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 100px;
+}
+.feedback-card{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.reviews{
+  font-size: 30px;
+}
+.reviews-text{
+  font-size: 20px;
+  color: #888;
+  line-height: 1.5;
+}
+.feedback-ratings{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.feedback-title{
+  font-size: 28px;
+  font-weight: bold;
+}
+.feedback-text{
+  font-size: 20px;
+  color: #3f3e3e;
+  line-height: 1.5;
+}
+.ratings{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.feed-icons{
+  display: flex;
+  gap: 10px;
+}
+.feed-icons .star-icon{
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.feed-icons .star-icon.active{
+  color: #f42c37;
+}
+.feed-icons .star-icon.active:hover{
+  color: #f42c37;
+}
+
+/* forms */
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.inputs-card {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 40%;
+}
+.feedback-card div label{
+  font-size: 20px;
+  color: #3f3e3e;
+}
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.feedback-input-name,
+.feedback-input-email {
+  width: 45%;
+}
+
+.feedback-message {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.feedback-message textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  resize: none;
+  margin-top: 10px;
+}
+
+.feedback-btn {
+  background-color: #f42c37;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.feedback-btn:hover {
+  background-color: #f20e19;
+}
+
+.selected-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.selected-card .selected-img {
+  width: 50%;
+}
+.selected-card .selected-img img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+.selected-table {
+  width: 30%;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.selected-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container td {
+  padding: 8px;
+  font-size: 20px;
+}
+.table-container tr {
+  display: flex;
+  justify-content: space-between;
+}
+.category-name {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.category-name a {
+  color: #f42c37;
+  text-decoration: none;
+  cursor: pointer;
+}
+.category-name a:hover {
+  text-decoration: underline;
+}
+
+/* responsive start */
+@media screen and (max-width: 1200px) {
+  .selected-table {
+    width: 40%;
+  }
+  .selected-cards {
+    margin-top: 50px;
+  }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 18px;
+  }
+  .descr-title{
+    font-size: 28px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 26px;
+  }
+  .product-descr{
+    font-size: 16px;
+  }
+  .review-card,.description-card{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .reviews{
+    font-size: 28px;
+  }
+  .feed-icons .star-icon{
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .selected-card {
+    flex-direction: column;
+    width: 100%;
+  }
+  .selected-card .selected-img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .selected-card .selected-img {
+    width: 95%;
+  }
+  .selected-table {
+    width: 95%;
+    margin-top: 50px;
+  }
+  .selected-card .selected-img .img{
+    width: 100%;
+    border-radius: 0px;
+  }
+  .feedback-input-name,
+.feedback-input-email{
+  width: 100%;
+}
+.feedback-input,
+.feedback-textarea{
+  padding: 13px;
+}
+}
+@media screen and (max-width: 800px) {
+  .selected-table {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .review-card,.description-card{
+    width: 95%;
+    margin-top: 0 auto;
+    gap: 10px;
+  }
+  .feedback-card{
+    width: 100%;
+  }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 16px;
+  }
+  .descr-title{
+    font-size: 25px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 23px;
+  }
+  .product-descr{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 700px) {
+}
+@media screen and (max-width: 500px) {
+  .selected-title{
+    font-size: 20px;
+  }
+  .table-container td{
+    font-size: 15px;
+  }
+  .category-name{
+    font-size: 15px;
+  }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 14px;
+  }
+  .descr-title{
+    font-size: 23px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 21px;
+  }
+  .product-descr{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .review-card,.description-card{
+    margin-top: 20px;
+  }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 14px;
+  }
+  .feedback-btn{
+    padding: 8px 35px;
+  }
+  .descr-title{
+    font-size: 23px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 21px;
+  }
+  .product-descr{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 320px) {
+}
+/* responsive end */
