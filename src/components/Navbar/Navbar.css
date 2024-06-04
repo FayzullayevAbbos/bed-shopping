@@ -115,7 +115,12 @@
     gap: 3rem;
   }
   .nav-logo-items .nav-items.active {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 40px;
   }
   .bars {
     display: block;
