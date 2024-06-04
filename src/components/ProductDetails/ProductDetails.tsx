@@ -1,18 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import   {  useState } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ProductDetails.css";
 import { useTranslation } from "react-i18next";
 import { IoStarSharp } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
-import { FaTelegram } from "react-icons/fa";
+
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-
-const ProductDetails = ({data }:any) => {
-  const { name} = useParams();
+const ProductDetails = ({ data }: any) => {
+  const { name } = useParams();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [BeforeContent, setBeforeContent] = useState(false);
@@ -20,14 +19,12 @@ const ProductDetails = ({data }:any) => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const translatedName = t(name);
-  // console.log(translatedName );
+  const translatedName = t(`${name}`);
  
-  
-  
 
   const selectedCollection = data.find(
-    (collection: { name: any | string | string[]; }) => t(collection.name) === translatedName,
+    (collection: { name: any | string | string[] }) =>
+      t(collection.name) === translatedName,
   );
 
   if (!selectedCollection) {
@@ -46,9 +43,6 @@ const ProductDetails = ({data }:any) => {
   const handleClickRating = (index: number) => {
     setRating(index + 1);
   };
- 
-
-
 
   const sendTelegramBot = () => {
     const token = "7012841524:AAG9C_93leiSPTovp8uX9aaoAm9kf_sA5_g";
@@ -68,9 +62,7 @@ const ProductDetails = ({data }:any) => {
     });
   };
 
-
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     sendTelegramBot();
     setFirstName("");
@@ -86,17 +78,21 @@ const ProductDetails = ({data }:any) => {
     <>
       <ToastContainer />
       <div className='containers'>
-       
         <Navbar />
       </div>
       <div className='selected-container'>
         <div className='selected-cards'>
           <div className='selected-card'>
-            <div className='selected-img'>
+            <div data-aos='zoom-in-right'
+              data-aos-duration='2000'  className='selected-img'>
               <img src={img} className='img' alt='' />
             </div>
-            <div className='selected-table'>
-              <span className='selected-title'>{t(name)}</span>
+            <div
+              data-aos='zoom-in-left'
+              data-aos-duration='2000'
+              className='selected-table'
+            >
+              <span className='selected-title'>{t(`${name}`)}</span>
               <table className='table-container'>
                 <tr>
                   <td>{t("Material")}:</td>
@@ -170,7 +166,7 @@ const ProductDetails = ({data }:any) => {
               <div className='feedback-card'>
                 <div className='feedback-ratings'>
                   <span className='feedback-title'>
-                    {t("review-sorov")} {t(name)}
+                    {t("review-sorov")} {t(`${name}`)}
                   </span>
                   <span className='feedback-text'>
                     {t("review-text")} *

@@ -11,7 +11,7 @@
   width: 95%;
   margin: 0 auto;
   height: 600px;
-  background-color: #000;
+  background-color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,7 @@
   margin-top: 100px;
 }
 .main .main-img {
+  
   width: 50%;
   height: 100%;
 }

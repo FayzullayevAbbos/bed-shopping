@@ -141,6 +141,8 @@ const Collection = () => {
           <div className='shop-right-cards'>
             {filteredCollection.map((collection, index) => (
               <div
+              data-aos='zoom-in-down'
+                  data-aos-duration={`199${index * 100}`}
                 className='shop-right-card'
                 key={index}
                 onClick={() => handleCollectionClick(collection)}

@@ -15,12 +15,12 @@ const About = () => {
         <Navbar />
       </div>
       <div className='about-container'>
-        <div className='about-left'>
+        <div data-aos="zoom-in-right" className='about-left'>
           <span className='left-title'>
             {t("about-section-title")}
           </span>
           <div className='left-texts'>
-            <span className='left-text'>
+            <span  className='left-text'>
               {t("about-section-text1")}
             </span>
             <span className='left-text'>
@@ -55,7 +55,7 @@ const About = () => {
             </span>
           </div>
         </div>
-        <div className='about-right'>
+        <div data-aos="zoom-in-left" className='about-right'>
           <img src={AboutImg} alt='' />
         </div>
       </div>
