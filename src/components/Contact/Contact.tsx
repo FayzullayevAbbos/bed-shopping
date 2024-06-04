@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ChangeEvent, SetStateAction, useState } from "react";
+import {  SetStateAction, useState } from "react";
 import "./Contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -27,9 +27,9 @@ const Contact = () => {
   }) => {
     setPhoneNumber(e.target.value);
   };
-  // const handleMessage = (e: { target: { value: SetStateAction<string>; }; }) => {
-  //   setMessage(e.target.value);
-  // };
+  const handleMessage = (e: { target: { value: SetStateAction<string>; }; }) => {
+     setMessage(e.target.value);
+  };
 
   const sendTelegramBot = () => {
     const token = "7012841524:AAG9C_93leiSPTovp8uX9aaoAm9kf_sA5_g";
@@ -57,11 +57,7 @@ const Contact = () => {
     toast.success('ok');
   };
 
-  function handleMessage(
-    _event: ChangeEvent<HTMLTextAreaElement>,
-  ): void {
-    throw new Error("Function not implemented.");
-  }
+  
 
   return (
     <>
